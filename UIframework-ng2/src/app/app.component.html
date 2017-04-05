@@ -1,0 +1,15 @@
+<!--导航栏-->
+<navbar></navbar>
+<!--菜单栏-->
+<div class="container-fluid kt-content">
+  <div class="kt-sidebar" id="accordion">
+    <div class="panel kt-sidebar-panel checked" *ngFor="let hero of heroes" (click)=onSelect(hero) [class.checked]="hero === selectedHero" routerLink="/page/{{hero.path}}">
+      <div class="kt-sidebar-panel-heading" data-toggle="collapse" data-parent="#accordion" href="#sidebar01">
+        <p><i class="iconfont {{hero.iconname}}"></i>{{hero.name}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--右侧内容-->
+<rightbar></rightbar>
+
